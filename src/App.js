@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import Taro from './Taro';
-import ShowName from './ShowName';
+import Profile from './Profile';
+import LightSwich from './LightSwich';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Taro></Taro>
-        <Taro></Taro>
-        <Taro></Taro>
-        <Taro></Taro>
-        <ShowName></ShowName>
+        <LightSwich></LightSwich>
+        <Profile></Profile>
       </div>
     );
   }

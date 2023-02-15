@@ -1,15 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Profile = (props) => {
-  // 우선 구조분해 할당을 사용하여 const로 처리
-  const { name, age, love } = props.data
-  return (
-    <dl>
-      <dt>Name</dt><dd>{name}</dd>
-      <dt>Age</dt><dd>{age}</dd>
-      <dt>Love</dt><dd>{love}</dd>
-    </dl>
-  )
+class Profile extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: 'Taro',
+      data: {
+        height: 170,
+        weight: 65
+      }
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>{this.state.name}</h1>
+        <dl>
+          <dt>HEIGHT</dt>
+          <dd>{this.state.data.height}</dd>
+          <dt>WEIGHT</dt>
+          <dd>{this.state.data.weight}</dd>
+        </dl>
+      </div>
+    );
+  }
 }
 
 export default Profile
